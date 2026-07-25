@@ -69,7 +69,13 @@ async function main() {
   try {
     await waitForServer(`${baseUrl}/`);
 
-    const browser = await puppeteer.launch({ headless: true });
+    // --no-sandbox: obrigatório em builds containerizados (Vercel, Docker, CI) —
+    // o sandbox de kernel do Chrome não funciona sem privilégios que esses
+    // ambientes não concedem, e sem essa flag o launch trava/falha ali mesmo.
+    const browser = await puppeteer.launch({
+      headless: true,
+      args: ['--no-sandbox', '--disable-setuid-sandbox'],
+    });
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 1000 });
 
