@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:xhtml="http://www.w3.org/1999/xhtml"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
+  <url>
+    <loc>https://victoraugusto.dev/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://victoraugusto.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/victor.jpg</image:loc>
+      <image:title>Victor Augusto — Desenvolvedor Full Stack .NET/C#</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/hope-pet.png</image:loc>
+      <image:title>Captura de tela da página inicial da plataforma Hope Pet</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/personalpay-1.png</image:loc>
+      <image:title>Painel de cobranças do PersonalPay, com status pendente, vencida e paga</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/personalpay-2.png</image:loc>
+      <image:title>Tela de nova cobrança do PersonalPay com QR code Pix gerado</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/live-transcribe.png</image:loc>
+      <image:title>Captura de tela do LiveTranscribe mostrando a transcrição de um áudio em andamento</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/racha-contas.jpeg</image:loc>
+      <image:title>Logo do RachaContas, bot de Telegram para dividir contas em grupo</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/Musicfly.png</image:loc>
+      <image:title>Captura de tela do Musicfy, catálogo de música desktop em C# inspirado no Spotify</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/portifolio7.png</image:loc>
+      <image:title>Captura de tela do app MinhaCesta Funcionário, sistema Android de gestão de rotas de entrega e controle de estoque</image:title>
+    </image:image>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://victoraugusto.dev/en/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://victoraugusto.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://victoraugusto.dev/es/</loc>
+    <xhtml:link rel="alternate" hreflang="pt-BR" href="https://victoraugusto.dev/"/>
+    <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
+    <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
+    <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
+    <lastmod>2026-07-25</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
