@@ -72,9 +72,10 @@
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#B5743A">
   <link rel="preload" as="image" href="/victor.jpg" fetchpriority="high">
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@600;700;800&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet">
+  <!-- Fontes auto-hospedadas (era Google Fonts externo — virou o maior bloqueio de
+       renderização no mobile no PageSpeed Insights; local elimina a conexão extra) -->
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-800-latin.woff2" crossorigin>
+  <link rel="preload" as="font" type="font/woff2" href="/fonts/inter-var-latin.woff2" crossorigin>
 </head>
 <body>
   <div id="root"></div>
