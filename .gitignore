@@ -1,0 +1,11 @@
+node_modules/
+dist/
+.claude/
+
+# SO
+.DS_Store
+Thumbs.db
+
+# logs
+*.log
+npm-debug.log*

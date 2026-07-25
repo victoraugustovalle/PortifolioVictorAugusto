@@ -1,0 +1,27 @@
+{
+  "name": "portifolio-victor-augusto",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "dev": "vite",
+    "predev": "node scripts/generate-images.mjs && node scripts/generate-og-image.mjs",
+    "prebuild": "node scripts/generate-images.mjs && node scripts/generate-og-image.mjs && node scripts/generate-sitemap.mjs",
+    "build": "vite build",
+    "postbuild": "node scripts/prerender.mjs",
+    "preview": "vite preview"
+  },
+  "dependencies": {
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "autoprefixer": "^10.4.20",
+    "postcss": "^8.4.47",
+    "puppeteer": "^25.3.0",
+    "sharp": "^0.35.3",
+    "tailwindcss": "^3.4.14",
+    "vite": "^5.4.10"
+  }
+}

@@ -1,0 +1,294 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* ── CSS Variables ── */
+:root {
+  /* Fundos — warm cream */
+  --bg:      #FAFAF8;
+  --bg-2:    #F2F1ED;
+  --bg-3:    #E8E7E2;
+  --bg-card: #FFFFFF;
+
+  /* Bordas */
+  --border:   #E0DFD9;
+  --border-2: #C8C7C0;
+
+  /* Texto — contraste ≥ 4.5:1 em todos */
+  --text:   #17171A;  /* 19.5:1 */
+  --text-2: #4B4B47;  /*  8.0:1 */
+  --text-3: #68655E;  /*  5.8:1 — era #999990 = 2.5:1 ❌ */
+
+  /* Accent INTERATIVO (texto, botões, links) — WCAG AA + AAA */
+  --accent:        #7B461A;                  /* 7.4:1 */
+  --accent-hover:  #5E3514;                  /* 10.2:1 */
+  --accent-bg:     rgba(123, 70, 26, 0.08);
+  --accent-border: rgba(123, 70, 26, 0.18);
+
+  /* Accent DECORATIVO — blobs, anéis, ícones (nunca em texto) */
+  --accent-vivid:  #B5743A;
+
+  /* Success — status "disponível", indicadores positivos */
+  --success:       #166534;                  /* 5.9:1 */
+  --success-bg:    rgba(22, 101, 52, 0.14);
+
+  /* Sombras */
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.08), 0 1px 2px rgba(0,0,0,0.05);
+  --shadow:        0 4px 24px rgba(0,0,0,0.09), 0 1px 6px rgba(0,0,0,0.05);
+  --shadow-lg:     0 20px 60px rgba(0,0,0,0.11), 0 4px 20px rgba(0,0,0,0.06);
+  --shadow-accent: 0 8px 32px rgba(123, 70, 26, 0.28);
+
+  /* Sistema */
+  --nav-bg: rgba(250, 250, 248, 0.90);
+  --nav-h:  68px;
+}
+
+.dark {
+  --bg:      #0F0F0E;
+  --bg-2:    #181817;
+  --bg-3:    #222220;
+  --bg-card: #1A1A19;
+  --border:   #2A2A27;
+  --border-2: #3A3A36;
+
+  --text:   #EFEFE9;  /* 18.5:1 */
+  --text-2: #A5A59F;  /*  6.8:1 */
+  --text-3: #8C8980;  /*  5.7:1 — era #686864 = 3.2:1 ❌ */
+
+  --accent:        #D4893E;                  /* 7.1:1 — era #CE8E4C = 4.1:1 ❌ */
+  --accent-hover:  #E8A056;
+  --accent-bg:     rgba(212, 137, 62, 0.11);
+  --accent-border: rgba(212, 137, 62, 0.24);
+  --accent-vivid:  #D4893E;
+
+  --success:       #4ADE80;                  /* 9.9:1 */
+  --success-bg:    rgba(74, 222, 128, 0.16);
+
+  --nav-bg:        rgba(15, 15, 14, 0.92);
+  --shadow-sm:     0 1px 3px rgba(0,0,0,0.35), 0 1px 2px rgba(0,0,0,0.25);
+  --shadow:        0 4px 24px rgba(0,0,0,0.35), 0 1px 6px rgba(0,0,0,0.25);
+  --shadow-lg:     0 20px 60px rgba(0,0,0,0.45), 0 4px 20px rgba(0,0,0,0.30);
+  --shadow-accent: 0 8px 32px rgba(212, 137, 62, 0.22);
+}
+
+/* ── Base ── */
+*, *::before, *::after { box-sizing: border-box; }
+html { scroll-behavior: smooth; scroll-padding-top: var(--nav-h); }
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  font-feature-settings: 'cv05' on, 'cv11' on;
+  background: var(--bg);
+  color: var(--text);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  overflow-x: hidden;
+  transition: background .3s, color .3s;
+}
+a    { text-decoration: none; color: inherit; }
+ul   { list-style: none; padding: 0; margin: 0; }
+img,
+picture { display: block; max-width: 100%; }
+
+/* Scroll offset para header fixo — WCAG 2.4 */
+section[id] { scroll-margin-top: 80px; }
+
+/* Foco visível global — WCAG 2.4.7 */
+:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 3px;
+  border-radius: 4px;
+}
+
+/* ── Scrollbar ── */
+* { scrollbar-width: thin; scrollbar-color: var(--border-2) var(--bg-2); }
+::-webkit-scrollbar       { width: 5px; }
+::-webkit-scrollbar-track { background: var(--bg-2); }
+::-webkit-scrollbar-thumb { background: var(--border-2); border-radius: 3px; }
+
+/* ── Reduced Motion — WCAG 2.3.3 ── */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ── Keyframes ── */
+@keyframes float-y {
+  0%, 100% { transform: translateY(0); }
+  50%       { transform: translateY(-14px); }
+}
+@keyframes pulse-dot {
+  0%, 100% { opacity: 1; transform: scale(1); }
+  50%       { opacity: 0.4; transform: scale(0.8); }
+}
+@keyframes marquee {
+  0%   { transform: translateX(0); }
+  100% { transform: translateX(-50%); }
+}
+@keyframes modal-overlay-in {
+  from { opacity: 0; }
+  to   { opacity: 1; }
+}
+@keyframes modal-panel-in {
+  from { opacity: 0; transform: translateY(16px) scale(.98); }
+  to   { opacity: 1; transform: translateY(0) scale(1); }
+}
+
+/* ── Scroll Reveal ── */
+.reveal {
+  opacity: 0;
+  transform: translateY(22px);
+  transition: opacity .6s cubic-bezier(0,0,.2,1), transform .6s cubic-bezier(0,0,.2,1);
+}
+.reveal.visible { opacity: 1; transform: translateY(0); }
+
+/* ── Hero section — dynamic viewport height (iOS Safari URL bar fix) ── */
+.hero-section {
+  min-height: 100svh;
+}
+
+/* ── Hero background texture — grid de pontos + glow único e contido ── */
+.hero-dot-grid {
+  position: absolute; inset: 0;
+  pointer-events: none;
+  background-image: radial-gradient(var(--border-2) 1px, transparent 1px);
+  background-size: 26px 26px;
+  opacity: .5;
+  -webkit-mask-image: radial-gradient(ellipse 55% 60% at 66% 32%, black 25%, transparent 82%);
+          mask-image: radial-gradient(ellipse 55% 60% at 66% 32%, black 25%, transparent 82%);
+}
+.hero-glow {
+  position: absolute; border-radius: 50%;
+  pointer-events: none; filter: blur(90px);
+  width: 340px; height: 340px;
+  bottom: -80px; right: -80px;
+  background: radial-gradient(circle, rgba(181,116,58,.16) 0%, transparent 72%);
+}
+
+/* ── Hero name editorial typography ── */
+.hero-name {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: clamp(2.5rem, 8vw, 5.5rem);
+  font-weight: 800;
+  letter-spacing: -.04em;
+  line-height: .92;
+  color: var(--text);
+  margin-bottom: 1.25rem;
+}
+.hero-name-pre {
+  display: block;
+  font-size: .47em;
+  font-weight: 500;
+  letter-spacing: .05em;
+  text-transform: uppercase;
+  color: var(--text-2);
+  margin-bottom: .22em;
+}
+.hero-name-main {
+  display: inline-block;
+  position: relative;
+}
+.hero-letter {
+  display: inline-block;
+  opacity: 0;
+  transform: translateY(.35em);
+  transition: opacity .5s cubic-bezier(0,0,.2,1), transform .5s cubic-bezier(0,0,.2,1);
+}
+.reveal.visible .hero-letter {
+  opacity: 1;
+  transform: translateY(0);
+}
+.hero-name-main::after {
+  content: '';
+  position: absolute;
+  bottom: .06em; left: 0;
+  width: 100%; height: .065em;
+  background: var(--accent);
+  border-radius: 2px;
+}
+
+/* ── About card ── */
+.about-card {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.about-card-photo { height: 460px; background: var(--bg-2); }
+.about-card-photo img { object-position: center 60%; }
+.about-card-content {
+  padding: 2.25rem 2.75rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-card-stats {
+  display: flex;
+  gap: 2.5rem;
+  margin-top: 1.5rem;
+}
+.about-card-stat-n {
+  font-family: 'Poppins', system-ui, sans-serif;
+  font-size: 2.25rem; font-weight: 800;
+  letter-spacing: -.06em; line-height: 1;
+  margin-bottom: .375rem;
+  color: var(--accent);
+}
+.about-card-stat-l { font-size: .78rem; color: var(--text-2); line-height: 1.4; }
+@media (max-width: 700px) {
+  .about-card { grid-template-columns: 1fr; }
+  .about-card-photo { height: 260px; }
+  .about-card-photo img { object-position: center 50%; }
+  .about-card-content { padding: 2rem 1.75rem; }
+}
+@media (min-width: 610px) and (max-width: 700px) {
+  /* Nessa faixa o card ainda é largura cheia (1 coluna) mas já bem mais
+     largo que um celular comum — 50% cortava a testa. */
+  .about-card-photo img { object-position: center 45%; }
+}
+
+/* ── Section padding responsivo ── */
+.section-pad {
+  padding-top:    clamp(3.5rem, 7vw, 6rem);
+  padding-bottom: clamp(3.5rem, 7vw, 6rem);
+}
+
+/* ── Photo ring (hero) ── */
+.hero-photo-ring {
+  position: absolute; inset: -3px;
+  border-radius: 31px;
+  background: linear-gradient(135deg, var(--accent-vivid) 0%, var(--accent) 100%);
+  opacity: .60;
+}
+
+/* ── Alvos de toque acessíveis — expande a área clicável sem alterar o
+   tamanho visual do controle (WCAG 2.5.5 / Apple HIG / Material: 44px).
+   O elemento precisa ter position != static: a maioria já tem (absolute/
+   fixed próprio); onde não tem, combine com a utilitária "relative".
+   Variante -40 é usada só onde dois alvos ficam lado a lado a poucos px
+   (ex.: tema + hambúrguer no header), pra evitar sobreposição de hitbox. ── */
+.tap-target::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 44px; height: 44px;
+  transform: translate(-50%, -50%);
+}
+.tap-target-40::before {
+  content: '';
+  position: absolute;
+  top: 50%; left: 50%;
+  width: 40px; height: 40px;
+  transform: translate(-50%, -50%);
+}
+
+/* ── Project modal thumb — em paisagem baixa, a proporção 16:7 sozinha
+   consome quase toda a altura da modal (88vh), sobrando uma fresta de
+   texto rolável. Abaixo desse teto de altura, a imagem vira uma faixa
+   de altura fixa em vh em vez de seguir a proporção. ── */
+.modal-thumb { aspect-ratio: 16 / 7; }
+@media (max-height: 480px) and (orientation: landscape) {
+  .modal-thumb { aspect-ratio: auto; height: 30vh; min-height: 96px; }
+}
