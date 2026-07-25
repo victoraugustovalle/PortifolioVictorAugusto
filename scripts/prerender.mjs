@@ -2,9 +2,34 @@ import { spawn } from 'node:child_process';
 import { mkdirSync, writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { fileURLToPath } from 'node:url';
-import puppeteer from 'puppeteer';
 
 const viteBin = fileURLToPath(new URL('../node_modules/vite/bin/vite.js', import.meta.url));
+
+// Localmente (Windows/Mac) usamos o pacote `puppeteer` normal, que já vem
+// com um Chromium para o SO da máquina. Em build containerizado (Vercel
+// seta a env VERCEL=1) o Chromium completo do puppeteer costuma travar o
+// processo sem log nenhum (falta de /dev/shm, processo zygote sendo morto
+// pelo sandbox etc.) — ali usamos @sparticuz/chromium, um binário Linux
+// compilado especificamente para rodar em ambientes serverless/containers.
+async function launchBrowser() {
+  if (process.env.VERCEL) {
+    const [{ default: chromium }, { default: puppeteerCore }] = await Promise.all([
+      import('@sparticuz/chromium'),
+      import('puppeteer-core'),
+    ]);
+    return puppeteerCore.launch({
+      args: [...chromium.args, '--disable-dev-shm-usage'],
+      executablePath: await chromium.executablePath(),
+      headless: chromium.headless,
+    });
+  }
+
+  const { default: puppeteer } = await import('puppeteer');
+  return puppeteer.launch({
+    headless: true,
+    args: ['--no-sandbox', '--disable-setuid-sandbox', '--disable-dev-shm-usage'],
+  });
+}
 
 // Pré-renderiza o build do Vite: sobe o preview local, deixa o React montar
 // a página real e grava o HTML já completo de volta em dist/**/index.html.
@@ -69,13 +94,7 @@ async function main() {
   try {
     await waitForServer(`${baseUrl}/`);
 
-    // --no-sandbox: obrigatório em builds containerizados (Vercel, Docker, CI) —
-    // o sandbox de kernel do Chrome não funciona sem privilégios que esses
-    // ambientes não concedem, e sem essa flag o launch trava/falha ali mesmo.
-    const browser = await puppeteer.launch({
-      headless: true,
-      args: ['--no-sandbox', '--disable-setuid-sandbox'],
-    });
+    const browser = await launchBrowser();
     const page = await browser.newPage();
     await page.setViewport({ width: 1280, height: 1000 });
 
