@@ -1,5 +1,11 @@
 // Gerado automaticamente por scripts/generate-images.mjs — não editar à mão.
 export default {
+  "victor-480.webp": "victor-480.57169f58.webp",
+  "victor-480.avif": "victor-480.a07f10c8.avif",
+  "victor-800.webp": "victor-800.8f95e3dc.webp",
+  "victor-800.avif": "victor-800.4f751d8e.avif",
+  "victor-1280.webp": "victor-1280.00991a2d.webp",
+  "victor-1280.avif": "victor-1280.c61e901b.avif",
   "hope-pet-480.webp": "hope-pet-480.b56d4a41.webp",
   "hope-pet-480.avif": "hope-pet-480.52a2fa6e.avif",
   "hope-pet-800.webp": "hope-pet-800.9c6fe1f3.webp",
