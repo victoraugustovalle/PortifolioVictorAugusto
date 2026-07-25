@@ -71,7 +71,9 @@
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
   <link rel="manifest" href="/site.webmanifest">
   <meta name="theme-color" content="#B5743A">
-  <link rel="preload" as="image" href="/victor.jpg" fetchpriority="high">
+  <!-- Sem preload de imagem aqui: a foto do Hero agora usa ResponsiveImage,
+       que já escolhe o tamanho/formato certo via <picture> + fetchpriority
+       no próprio <img>; um preload fixo bateria de novo o arquivo cru. -->
   <!-- Fontes auto-hospedadas (era Google Fonts externo — virou o maior bloqueio de
        renderização no mobile no PageSpeed Insights; local elimina a conexão extra) -->
   <link rel="preload" as="font" type="font/woff2" href="/fonts/poppins-800-latin.woff2" crossorigin>

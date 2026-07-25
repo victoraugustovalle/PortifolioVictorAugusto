@@ -25,6 +25,7 @@ const WIDTHS = [480, 800, 1280];
 // (src/data/events.js, também usada em About.jsx). portifolio1-6.png ficam
 // de fora por não serem carregadas por nenhuma página.
 const SOURCES = [
+  '/victor.jpg',
   '/hope-pet.png',
   '/personalpay-1.png',
   '/personalpay-2.png',

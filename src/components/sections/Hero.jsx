@@ -1,4 +1,5 @@
 import RevealOnScroll from '../ui/RevealOnScroll';
+import ResponsiveImage from '../ui/ResponsiveImage';
 import { useLanguage } from '../../context/LanguageContext';
 
 export default function Hero() {
@@ -73,13 +74,16 @@ export default function Hero() {
                 className="relative z-10 w-full h-full overflow-hidden border-[3px]"
                 style={{ borderRadius: 28, borderColor: 'var(--bg)', background: 'var(--bg-2)' }}
               >
-                <img
+                <ResponsiveImage
                   src="/victor.jpg"
                   alt="Victor Augusto"
+                  loading="eager"
                   fetchPriority="high"
+                  sizes="300px"
                   width={300}
                   height={340}
-                  className="w-full h-full object-cover object-top"
+                  objectPosition="top"
+                  style={{ width: '100%', height: '100%' }}
                 />
               </div>
             </div>
