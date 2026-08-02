@@ -10,7 +10,7 @@ const MANIFEST_HREF = { pt: '/site.webmanifest', en: '/site.en.webmanifest', es:
 
 const FULL_NAME = 'Victor Augusto Dias Mendes do Valle';
 const SOCIAL_LINKS = [
-  'https://github.com/victoraugusto3215',
+  'https://github.com/victoraugustovalle',
   'https://www.linkedin.com/in/victor-augusto-developer/',
 ];
 

@@ -54,4 +54,4 @@ npm run preview
 Analista de Sistemas / Desenvolvedor Full Stack em Belo Horizonte, atualmente na Attime, trabalhando com .NET, C# e integrações bancárias. Formando em Sistemas de Informação pela COTEMIG.
 
 - [LinkedIn](https://www.linkedin.com/in/victor-augusto-developer/)
-- [GitHub](https://github.com/victoraugusto3215)
+- [GitHub](https://github.com/victoraugustovalle)

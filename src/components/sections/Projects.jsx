@@ -269,7 +269,7 @@ export default function Projects() {
         {/* GitHub CTA */}
         <div className="text-center">
           <a
-            href="https://github.com/victoraugusto3215"
+            href="https://github.com/victoraugustovalle"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 px-6 py-3 rounded-xl text-sm font-semibold border transition-all duration-200"

@@ -42,8 +42,8 @@ const contacts = [
   {
     type:     'GitHub',
     key:      'github',
-    value:    'victoraugusto3215',
-    href:     'https://github.com/victoraugusto3215',
+    value:    'victoraugustovalle',
+    href:     'https://github.com/victoraugustovalle',
     external: true,
     icon: (
       <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor">
