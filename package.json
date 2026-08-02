@@ -13,7 +13,7 @@
   },
   "dependencies": {
     "react": "^18.3.1",
-    "react-dom": "^18.3.1"
+    "react-dom": "^19.2.8"
   },
   "devDependencies": {
     "@sparticuz/chromium": "^149.0.0",
