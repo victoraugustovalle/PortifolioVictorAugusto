@@ -1,0 +1,25 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v7
+      - uses: actions/setup-node@v7
+        with:
+          node-version: '20'
+          cache: 'npm'
+      - name: Install
+        run: npm ci
+      # Build só do app (Vite). Geração de imagens, sitemap e pré-render via
+      # Puppeteer ficam fora do CI de propósito: dependem de Chromium
+      # headless e não são o que valida se o código da aplicação compila.
+      # A prova real desse pipeline completo é o próprio deploy em produção.
+      - name: Build (app)
+        run: npx vite build
