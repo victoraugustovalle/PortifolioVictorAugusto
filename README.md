@@ -1,6 +1,6 @@
 # Portfólio — Victor Augusto
 
-[![CI](https://github.com/victoraugusto3215/PortifolioVictorAugusto/actions/workflows/ci.yml/badge.svg)](https://github.com/victoraugusto3215/PortifolioVictorAugusto/actions/workflows/ci.yml)
+[![CI](https://github.com/victoraugustovalle/PortifolioVictorAugusto/actions/workflows/ci.yml/badge.svg)](https://github.com/victoraugustovalle/PortifolioVictorAugusto/actions/workflows/ci.yml)
 
 Código-fonte do meu portfólio pessoal: quem eu sou, onde já trabalhei, o que já construí e como falar comigo. Site em português, inglês e espanhol, com tema claro/escuro e SEO pensado desde a estrutura, não como retrofit.
 

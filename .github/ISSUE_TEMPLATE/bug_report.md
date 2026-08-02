@@ -3,7 +3,7 @@ name: Bug report
 about: Reporte um comportamento inesperado ou incorreto
 title: "[Bug] "
 labels: bug
-assignees: victoraugusto3215
+assignees: victoraugustovalle
 ---
 
 ## Descrição
