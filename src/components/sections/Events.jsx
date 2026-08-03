@@ -105,8 +105,11 @@ export default function Events() {
             animation: 'marquee 22s linear infinite',
             animationPlayState: paused ? 'paused' : 'running',
           }}
-          onMouseEnter={() => setHovering(true)}
-          onMouseLeave={() => setHovering(false)}
+          /* pointerType: no touch, o navegador simula hover ao tocar — sem
+             checar 'mouse', um toque na imagem pausava o carrossel sozinho.
+             No mobile, só o botão explícito de pausa (abaixo) deve pausar. */
+          onPointerEnter={e => { if (e.pointerType === 'mouse') setHovering(true); }}
+          onPointerLeave={e => { if (e.pointerType === 'mouse') setHovering(false); }}
         >
           {track.map(({ id, name, org, tag, img }, i) => (
             <div
