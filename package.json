@@ -17,7 +17,7 @@
   },
   "devDependencies": {
     "@sparticuz/chromium": "^149.0.0",
-    "@vitejs/plugin-react": "^4.3.1",
+    "@vitejs/plugin-react": "^6.0.5",
     "autoprefixer": "^10.5.4",
     "postcss": "^8.5.25",
     "puppeteer": "^25.4.0",
