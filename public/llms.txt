@@ -1,0 +1,22 @@
+# Victor Augusto
+
+> Full Stack Developer (.NET/C#, React) based in Belo Horizonte, Brazil. Systems Analyst at Attime, working on banking integrations and payment gateway integrations for an insurance and financial services ERP.
+
+Portfolio site available in Portuguese (default), English and Spanish. Graduating in Information Systems from Faculdade COTEMIG (2023–2026). Previously a Systems Development Analyst at GW Engenharia Clínica, working on a hospital/clinic management ERP.
+
+## Profile
+
+- [About](https://victoraugusto.dev/#about): background, current role, and education
+- [Skills](https://victoraugusto.dev/#skills): frontend, backend, database and tooling stack
+- [Experience](https://victoraugusto.dev/#experience): work history and education timeline
+- [Certifications](https://victoraugusto.dev/#certifications): Google Cloud and AWS credentials
+- [Resume (PDF, Portuguese)](https://victoraugusto.dev/pdf/curriculo.pdf)
+- [LinkedIn](https://www.linkedin.com/in/victor-augusto-developer/)
+- [GitHub](https://github.com/victoraugustovalle)
+
+## Projects
+
+- [PersonalPay](https://victoraugusto.dev/#projects): recurring billing app with Pix QR code payments. [Source](https://github.com/victoraugustovalle/PersonalPay)
+- [RachaContas](https://victoraugusto.dev/#projects): Telegram bot that splits group expenses automatically. [Source](https://github.com/victoraugustovalle/RachaContaBot)
+- [LiveTranscribe](https://victoraugusto.dev/#projects): real-time audio transcription app. [Source](https://github.com/victoraugustovalle/LiveTranscribe)
+- [HopePet](https://victoraugusto.dev/#projects): platform to reunite lost and found pets, using computer vision and geolocation. Commercial product in launch phase, source not public.
