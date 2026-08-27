@@ -94,13 +94,20 @@ export default {
         alt: 'RachaContas logo, a Telegram bot for splitting group expenses',
         liveLabel: 'Try it on Telegram',
       },
+      tripflow: {
+        desc: "App for organizing group trips: splits expenses automatically, builds an itinerary with a geocoded map, manages reservations and documents, with real-time updates across participants.",
+        longDesc: "Anyone who's organized a group trip knows the problem: an expense spreadsheet nobody updates, an itinerary scattered across a WhatsApp thread, and in the end nobody's quite sure who's already paid what. TripFlow brings all of that into a single trip, with participants, roles (owner, editor, viewer), and real-time updates via SignalR. Expenses are split automatically and the app works out the smallest set of transfers needed to settle up; a debt can be marked as paid and confirmed by the other side, no payment gateway involved, just mutual honesty on record. The itinerary has address geocoding, a day map with a calculated route between stops, and a readiness indicator that cross-references itinerary, reservations, documents, and checklist. But the project's main point was to show authentication and authorization done properly: Argon2id password hashing, RS256-signed JWTs with a rotating refresh token and reuse detection, Google login, TOTP-based 2FA, and resource-level role authorization, not just route-level. Backend in .NET 10 with Clean Architecture and PostgreSQL, tested with xUnit. Frontend in React, TypeScript, and Tailwind, with its own visual identity.",
+        badge: 'Group trips, in real time',
+        images: [
+          "TripFlow login screen, with the app's visual identity and mascot",
+          'TripFlow expenses panel with budget by category and who owes whom',
+          "TripFlow itinerary map with the calculated route between the day's stops",
+        ],
+        liveLabel: 'View live',
+      },
       musicfy: {
         desc: 'Desktop music catalog built in C#, inspired by Spotify. Users pick a song from their favorite artist and it plays instantly.',
         alt: 'Screenshot of Musicfy, a desktop music catalog in C# inspired by Spotify',
-      },
-      'minhacesta-funcionario': {
-        desc: "Internal app for managing delivery routes, inventory control, and basket assembly checklists. Integrated with the company's admin dashboard.",
-        alt: 'Screenshot of the MinhaCesta Funcionário app, an Android system for managing delivery routes and inventory control',
       },
     },
   },

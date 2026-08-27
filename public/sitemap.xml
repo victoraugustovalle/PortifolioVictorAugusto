@@ -33,14 +33,22 @@
       <image:title>Logo do RachaContas, bot de Telegram para dividir contas em grupo</image:title>
     </image:image>
     <image:image>
+      <image:loc>https://victoraugusto.dev/tripflow-1.png</image:loc>
+      <image:title>Tela de login do TripFlow, com a identidade visual e o mascote do app</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/tripflow-2.png</image:loc>
+      <image:title>Painel de gastos do TripFlow com orçamento por categoria e quem deve pra quem</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/tripflow-3.png</image:loc>
+      <image:title>Mapa do roteiro do TripFlow com a rota calculada entre os pontos do dia</image:title>
+    </image:image>
+    <image:image>
       <image:loc>https://victoraugusto.dev/Musicfly.png</image:loc>
       <image:title>Captura de tela do Musicfy, catálogo de música desktop em C# inspirado no Spotify</image:title>
     </image:image>
-    <image:image>
-      <image:loc>https://victoraugusto.dev/portifolio7.png</image:loc>
-      <image:title>Captura de tela do app MinhaCesta Funcionário, sistema Android de gestão de rotas de entrega e controle de estoque</image:title>
-    </image:image>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -50,7 +58,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -60,7 +68,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
-    <lastmod>2026-08-21</lastmod>
+    <lastmod>2026-08-27</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

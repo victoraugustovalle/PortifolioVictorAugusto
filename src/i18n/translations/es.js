@@ -94,13 +94,20 @@ export default {
         alt: 'Logo de RachaContas, bot de Telegram para dividir cuentas en grupo',
         liveLabel: 'Probar en Telegram',
       },
+      tripflow: {
+        desc: 'App para organizar viajes en grupo: divide gastos automáticamente, arma el itinerario con mapa geocodificado, gestiona reservas y documentos, con actualización en tiempo real entre los participantes.',
+        longDesc: 'Cualquiera que haya organizado un viaje en grupo conoce el problema: una hoja de cálculo de gastos que nadie actualiza, un itinerario disperso en una conversación de WhatsApp, y al final nadie sabe bien quién ya pagó qué. TripFlow reúne todo eso en un solo viaje, con participantes, roles (dueño, editor, visor) y actualización en tiempo real vía SignalR. Los gastos se dividen automáticamente y la app calcula el menor número de transferencias para saldar todo; una deuda puede marcarse como pagada y ser confirmada por el otro lado, sin pasarela de pago, solo honestidad mutua registrada. El itinerario tiene geocodificación de direcciones, un mapa del día con la ruta calculada entre los puntos y un indicador de preparación que cruza itinerario, reservas, documentos y checklist. Pero el proyecto se pensó principalmente para mostrar autenticación y autorización hechas en serio: contraseña con Argon2id, JWT firmado RS256 con refresh token rotativo y detección de reuso, login con Google, 2FA por TOTP y autorización por rol verificada a nivel de recurso, no solo de ruta. Backend en .NET 10 con Clean Architecture y PostgreSQL, probado con xUnit. Frontend en React, TypeScript y Tailwind, con identidad visual propia.',
+        badge: 'Viajes en grupo, en tiempo real',
+        images: [
+          'Pantalla de inicio de sesión de TripFlow, con la identidad visual y la mascota de la app',
+          'Panel de gastos de TripFlow con presupuesto por categoría y quién le debe a quién',
+          'Mapa del itinerario de TripFlow con la ruta calculada entre los puntos del día',
+        ],
+        liveLabel: 'Ver publicado',
+      },
       musicfy: {
         desc: 'Catálogo de música de escritorio hecho en C#, inspirado en Spotify. El usuario elige la canción de su artista favorito y suena al instante.',
         alt: 'Captura de pantalla de Musicfy, catálogo de música de escritorio en C# inspirado en Spotify',
-      },
-      'minhacesta-funcionario': {
-        desc: 'App interna para gestión de rutas de entrega, control de inventario y checklist de armado de canastas. Integrada al panel administrativo de la empresa.',
-        alt: 'Captura de pantalla de la app MinhaCesta Funcionário, sistema Android de gestión de rutas de entrega y control de inventario',
       },
     },
   },
