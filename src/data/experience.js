@@ -1,7 +1,7 @@
 export const jobs = [
   {
     id:      'attime',
-    company: 'Attime',
+    company: 'AtTime',
     role:    'Analista de Sistemas I',
     period:  'Jul 2025 → Atual',
     desc:    'Trabalho no ERP STAR, uma plataforma de gestão para os segmentos de seguros, previdência e serviços financeiros. Desenvolvo soluções robustas e realizo integrações com sistemas bancários e gateways de pagamento, contribuindo para aumentar a eficiência, a confiabilidade e a escalabilidade da plataforma.',
