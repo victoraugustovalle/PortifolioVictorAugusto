@@ -1,7 +1,7 @@
 export default {
   meta: {
     title: 'Victor Augusto - Engenheiro de Software | Portfólio',
-    description: 'Portfólio de Victor Augusto, desenvolvedor Full Stack e Analista de Sistemas na Attime, em Belo Horizonte. C#, .NET, React e sistemas enterprise.',
+    description: 'Portfólio de Victor Augusto, desenvolvedor Full Stack e Analista de Sistemas na AtTime, em Belo Horizonte. C#, .NET, React e sistemas enterprise.',
     ogTitle: 'Victor Augusto — Desenvolvedor Full Stack .NET/C#',
     jobTitle: 'Desenvolvedor Full Stack .NET/C#',
   },

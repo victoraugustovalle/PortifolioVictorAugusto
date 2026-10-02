@@ -1,6 +1,6 @@
 # Victor Augusto
 
-> Full Stack Developer (.NET/C#, React) based in Belo Horizonte, Brazil. Systems Analyst at Attime, working on banking integrations and payment gateway integrations for an insurance and financial services ERP.
+> Full Stack Developer (.NET/C#, React) based in Belo Horizonte, Brazil. Systems Analyst at AtTime, working on banking integrations and payment gateway integrations for an insurance and financial services ERP.
 
 Portfolio site available in Portuguese (default), English and Spanish. Graduating in Information Systems from Faculdade COTEMIG (2023–2026). Previously a Systems Development Analyst at GW Engenharia Clínica, working on a hospital/clinic management ERP.
 

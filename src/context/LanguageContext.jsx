@@ -76,7 +76,7 @@ function setJsonLd(lang) {
         url,
         image: `${SITE_ORIGIN}/victor.jpg`,
         email: 'mailto:victoraugusto3215@gmail.com',
-        worksFor: { '@type': 'Organization', name: 'Attime' },
+        worksFor: { '@type': 'Organization', name: 'AtTime' },
         address: {
           '@type': 'PostalAddress',
           addressLocality: 'Belo Horizonte',
