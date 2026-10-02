@@ -151,6 +151,17 @@ export default {
     heading: "Events I've attended in Belo Horizonte",
     pause: 'Pause the events carousel animation',
     resume: 'Resume the events carousel animation',
+    alt: {
+      'hackfest-2024': 'Victor Augusto at Feluma HackFest 2024, winning 2nd place',
+      'aws-reinvent-2025': 'Victor Augusto at AWS re:Invent Recap 2025, by AWS User Group BH',
+      'devfest-2025': 'Victor Augusto at DevFest BH 2025, by GDG Belo Horizonte',
+      'build-with-ai': 'Victor Augusto at Build with AI, by GDG Nova Lima',
+      'feluma-summit-2024': 'Victor Augusto at Feluma Summit 2024',
+      'devfest': 'Victor Augusto at DevFest BH, by GDG Belo Horizonte',
+      'gdg-2025': 'Victor Augusto at GDG Meet 2025 in Belo Horizonte',
+      'gdg': 'Victor Augusto at a GDG Belo Horizonte community event',
+      'google-developers-group': 'Victor Augusto at a Google Developers Group meetup',
+    },
     tags: {
       'Hackathon': 'Hackathon',
       'Cloud': 'Cloud',

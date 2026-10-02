@@ -1,6 +1,7 @@
 import { writeFileSync } from 'node:fs';
 import path from 'node:path';
 import { projects } from '../src/data/projects.js';
+import { events } from '../src/data/events.js';
 import pt from '../src/i18n/translations/pt.js';
 
 // Gera public/sitemap.xml a cada build — lastmod nunca fica parado — e
@@ -28,9 +29,11 @@ function hreflangBlock(indent) {
   ].join('\n');
 }
 
-// Só screenshots reais de produto e a foto de perfil — nada de ícones
-// decorativos, badges de certificação ou fotos de evento, que são
-// conteúdo secundário e não ajudam a descoberta por imagem.
+// Foto de perfil, screenshots reais de produto e fotos de evento — fotos
+// de evento são as que mais aparecem em busca pelo nome no Google Imagens,
+// então entram também. Fica de fora só o que é decorativo (ícones, badges
+// de certificação). <image:title> foi descontinuado pelo Google em 2022 e é
+// ignorado — quem conta é o alt no HTML; fica aqui só como documentação.
 function collectImages() {
   const images = [{ loc: '/victor.jpg', title: 'Victor Augusto — Desenvolvedor Full Stack .NET/C#' }];
 
@@ -43,6 +46,10 @@ function collectImages() {
     } else if (project.img) {
       images.push({ loc: project.img, title: tr.alt ?? project.alt ?? project.title });
     }
+  }
+
+  for (const event of events) {
+    images.push({ loc: event.img, title: pt.events.alt?.[event.id] ?? event.name });
   }
   return images;
 }

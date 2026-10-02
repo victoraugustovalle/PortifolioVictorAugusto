@@ -48,7 +48,43 @@
       <image:loc>https://victoraugusto.dev/Musicfly.png</image:loc>
       <image:title>Captura de tela do Musicfy, catálogo de música desktop em C# inspirado no Spotify</image:title>
     </image:image>
-    <lastmod>2026-08-27</lastmod>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-hackfest-2024-feluma.jpeg</image:loc>
+      <image:title>Victor Augusto no HackFest 2024 da Feluma, onde conquistou o 2º lugar</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-aws-reinvent-recap-2025.jpeg</image:loc>
+      <image:title>Victor Augusto no AWS re:Invent Recap 2025, do AWS User Group BH</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-devfest-bh-2025.jpeg</image:loc>
+      <image:title>Victor Augusto no DevFest BH 2025, do GDG Belo Horizonte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-build-with-ai-gdg-nova-lima.jpeg</image:loc>
+      <image:title>Victor Augusto no Build with AI, do GDG Nova Lima</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-feluma-summit-2024.jpeg</image:loc>
+      <image:title>Victor Augusto no Feluma Summit 2024</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-devfest-bh.jpeg</image:loc>
+      <image:title>Victor Augusto no DevFest BH, do GDG Belo Horizonte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-gdg-meet-2025.jpeg</image:loc>
+      <image:title>Victor Augusto no GDG Meet 2025, em Belo Horizonte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-gdg-belo-horizonte.jpeg</image:loc>
+      <image:title>Victor Augusto em evento da comunidade GDG Belo Horizonte</image:title>
+    </image:image>
+    <image:image>
+      <image:loc>https://victoraugusto.dev/eventos/victor-augusto-google-developers-group.jpeg</image:loc>
+      <image:title>Victor Augusto em encontro do Google Developers Group</image:title>
+    </image:image>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>1.0</priority>
   </url>
@@ -58,7 +94,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>
@@ -68,7 +104,7 @@
     <xhtml:link rel="alternate" hreflang="en" href="https://victoraugusto.dev/en/"/>
     <xhtml:link rel="alternate" hreflang="es" href="https://victoraugusto.dev/es/"/>
     <xhtml:link rel="alternate" hreflang="x-default" href="https://victoraugusto.dev/"/>
-    <lastmod>2026-08-27</lastmod>
+    <lastmod>2026-10-02</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.8</priority>
   </url>

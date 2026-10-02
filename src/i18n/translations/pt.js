@@ -151,6 +151,17 @@ export default {
     heading: 'Eventos que participei em Belo Horizonte',
     pause: 'Pausar animação do carrossel de eventos',
     resume: 'Retomar animação do carrossel de eventos',
+    alt: {
+      'hackfest-2024': 'Victor Augusto no HackFest 2024 da Feluma, onde conquistou o 2º lugar',
+      'aws-reinvent-2025': 'Victor Augusto no AWS re:Invent Recap 2025, do AWS User Group BH',
+      'devfest-2025': 'Victor Augusto no DevFest BH 2025, do GDG Belo Horizonte',
+      'build-with-ai': 'Victor Augusto no Build with AI, do GDG Nova Lima',
+      'feluma-summit-2024': 'Victor Augusto no Feluma Summit 2024',
+      'devfest': 'Victor Augusto no DevFest BH, do GDG Belo Horizonte',
+      'gdg-2025': 'Victor Augusto no GDG Meet 2025, em Belo Horizonte',
+      'gdg': 'Victor Augusto em evento da comunidade GDG Belo Horizonte',
+      'google-developers-group': 'Victor Augusto em encontro do Google Developers Group',
+    },
     tags: {
       'Hackathon': 'Hackathon',
       'Cloud': 'Cloud',

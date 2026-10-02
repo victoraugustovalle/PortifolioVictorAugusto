@@ -111,66 +111,72 @@ export default function Events() {
           onPointerEnter={e => { if (e.pointerType === 'mouse') setHovering(true); }}
           onPointerLeave={e => { if (e.pointerType === 'mouse') setHovering(false); }}
         >
-          {track.map(({ id, name, org, tag, img }, i) => (
-            <div
-              key={`${id}-${i}`}
-              style={{
-                position:     'relative',
-                width:        300,
-                height:       210,
-                flexShrink:   0,
-                borderRadius: 16,
-                overflow:     'hidden',
-                background:   'var(--bg-3)',
-                border:       '1px solid var(--border)',
-              }}
-            >
-              <ResponsiveImage
-                src={img}
-                alt={name}
-                loading="lazy"
-                sizes="300px"
-                width={300}
-                height={210}
-                style={{ width: '100%', height: '100%' }}
-              />
-
-              {/* Gradient overlay */}
+          {track.map(({ id, name, org, tag, img }, i) => {
+            // Segunda metade do track é só a cópia visual do loop — fica fora
+            // da árvore de acessibilidade para leitor de tela não ler tudo duas vezes.
+            const isCopy = i >= events.length;
+            return (
               <div
+                key={`${id}-${i}`}
+                aria-hidden={isCopy || undefined}
                 style={{
-                  position:   'absolute', inset: 0,
-                  background: 'linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.05) 55%, transparent 100%)',
+                  position:     'relative',
+                  width:        300,
+                  height:       210,
+                  flexShrink:   0,
+                  borderRadius: 16,
+                  overflow:     'hidden',
+                  background:   'var(--bg-3)',
+                  border:       '1px solid var(--border)',
                 }}
-              />
+              >
+                <ResponsiveImage
+                  src={img}
+                  alt={isCopy ? '' : t(`events.alt.${id}`)}
+                  loading="lazy"
+                  sizes="300px"
+                  width={300}
+                  height={210}
+                  style={{ width: '100%', height: '100%' }}
+                />
 
-              {/* Text */}
-              <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem' }}>
-                {tag && (
-                  <span
-                    style={{
-                      display:       'inline-block',
-                      fontSize:      '.7rem',
-                      fontWeight:    700,
-                      padding:       '2px 8px',
-                      borderRadius:  6,
-                      marginBottom:  6,
-                      background:    'var(--accent)',
-                      color:         '#fff',
-                      letterSpacing: '.01em',
-                    }}
-                  >
-                    {t(`events.tags.${tag}`)}
-                  </span>
-                )}
-                <div style={{ fontSize: '.85rem', fontWeight: 600, color: '#fff', lineHeight: 1.3 }}>
-                  {name}
-                </div>
-                <div style={{ fontSize: '.72rem', marginTop: 3, color: 'rgba(255,255,255,.65)' }}>
-                  {org}
+                {/* Gradient overlay */}
+                <div
+                  style={{
+                    position:   'absolute', inset: 0,
+                    background: 'linear-gradient(to top, rgba(0,0,0,.75) 0%, rgba(0,0,0,.05) 55%, transparent 100%)',
+                  }}
+                />
+
+                {/* Text */}
+                <div style={{ position: 'absolute', bottom: 0, left: 0, right: 0, padding: '1rem' }}>
+                  {tag && (
+                    <span
+                      style={{
+                        display:       'inline-block',
+                        fontSize:      '.7rem',
+                        fontWeight:    700,
+                        padding:       '2px 8px',
+                        borderRadius:  6,
+                        marginBottom:  6,
+                        background:    'var(--accent)',
+                        color:         '#fff',
+                        letterSpacing: '.01em',
+                      }}
+                    >
+                      {t(`events.tags.${tag}`)}
+                    </span>
+                  )}
+                  <div style={{ fontSize: '.85rem', fontWeight: 600, color: '#fff', lineHeight: 1.3 }}>
+                    {name}
+                  </div>
+                  <div style={{ fontSize: '.72rem', marginTop: 3, color: 'rgba(255,255,255,.65)' }}>
+                    {org}
+                  </div>
                 </div>
               </div>
-            </div>
-          ))}
+            );
+          })}
         </div>
       </div>
 

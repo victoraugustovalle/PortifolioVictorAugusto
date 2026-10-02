@@ -1,5 +1,6 @@
 import { createContext, useContext, useEffect, useMemo, useState } from 'react';
 import { dictionaries, DEFAULT_LANG, SUPPORTED_LANGS, isSupportedLang } from '../i18n';
+import { events } from '../data/events';
 
 const LanguageContext = createContext();
 
@@ -92,6 +93,18 @@ function setJsonLd(lang) {
         inLanguage: HTML_LANG[lang],
         author: { '@id': `${SITE_ORIGIN}/#person` },
       },
+      // Fotos de evento como ImageObject ligado à Person — reforça para o
+      // Google Imagens que a pessoa na foto é o dono do site. Sem creator/
+      // copyright: as fotos são de fotógrafos dos eventos, não do Victor.
+      ...events.map((event) => ({
+        '@type': 'ImageObject',
+        '@id': `${SITE_ORIGIN}/#image-${event.id}`,
+        contentUrl: SITE_ORIGIN + event.img,
+        name: event.name,
+        caption: dict.events.alt[event.id],
+        inLanguage: HTML_LANG[lang],
+        about: { '@id': `${SITE_ORIGIN}/#person` },
+      })),
     ],
   };
 

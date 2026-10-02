@@ -41,7 +41,7 @@ export default function About() {
           {/* Photo */}
           <div className="about-card-photo">
             <ResponsiveImage
-              src="/eventos/GDG.jpeg"
+              src="/eventos/victor-augusto-gdg-belo-horizonte.jpeg"
               alt={t('about.photoAlt')}
               loading="lazy"
               sizes="(min-width: 700px) 50vw, 100vw"
