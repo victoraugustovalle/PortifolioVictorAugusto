@@ -28,7 +28,7 @@ export const jobs = [
 export const education = [
   {
     id:     'graduacao-si',
-    period: 'Fev 2023 → Jul 2026',
+    period: 'Fev 2023 → Dez 2026',
     title:  'Bacharelado em Sistemas de Informação',
     place:  'Faculdade COTEMIG · Belo Horizonte, MG',
   },
